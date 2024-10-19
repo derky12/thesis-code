@@ -46,8 +46,6 @@ class TrainingConfig:
     best_pct_match: float = 0.0
     best_avg_score: float = 0.0
     save_pct_frequency: int = 2048
-    training_data_path: str = "./data/df_train_5m.csv"
-    val_data_path: str = "./data/df_val_5m_1k.csv"
     device: str = "cuda" if torch.cuda.is_available() else "cpu"  # From device
     spectra_batch_size: int = 128
     train_val_ratio: float = 0.8
@@ -66,11 +64,9 @@ class TrainingConfig:
         0.000005  # 0.00001  # 0.00003  # 0.00007  # 细化 0.00003 # 初始 0.0001
     )
     training_id: str = "default"
-    # vocab_path: str = "./data/vocab-5m-filtered.nb"
-    vocab_path: str = "./data/vocab_1213383.nb"
+    vocab_path: str = "./data/vocab_filtered.nb"
     resume_from_checkpoint: str = None
     regression_loss_weight: float = 1.0
-    # trans_ckpt: str = "./checkpoints/ckpt_5m_0.91_tani.pth"
     trans_ckpt: str = (
         "./checkpoints/no-vae-1m-training-3_batch_size_128_num_epoch_1000_val_avg_score_0.92_best_pct_0.674.pth"
     )
@@ -82,7 +78,6 @@ class TrainingConfig:
     spectra_ckpt: str = (
         "./checkpoints/spectra-4levels-translation-1m-2_num_epoch_264_best_val_error_0.1354939602315426.pth"
     )
-    # decoder_output: str = "decoder_output.csv"
 
     @classmethod
     def from_args(cls):

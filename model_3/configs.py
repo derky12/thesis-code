@@ -7,10 +7,10 @@ import random
 @dataclass
 class TrainingConfig:
     training_data_path: str = (
-        "./data/3m_processed_train_ais_tokens.csv"  # "./data/training_1068070.csv"
+        "./data/training_1068070.csv"
     )
     val_data_path: str = (
-        "./data/3m_processed_val_ais_tokens.csv"  # "./data/val_1000.csv"
+        "./data/val_1000.csv"
     )
     device: str = "cuda" if torch.cuda.is_available() else "cpu"  # From device
     train_batch_size: int = 128
@@ -51,10 +51,6 @@ class TrainingConfig:
     in_training: bool = True
     spectra_val_path: str = "./data/spectra/spectra_val.csv"
     spectra_train_path: str = "./data/spectra/spectra_train.csv"
-    trans_ckpt: str = (
-        ## "./checkpoints/training_1068070-4-attention-pooling_best_avg_score_0.7749342593201185_pct_match_0.295_num_epoch_21.pth"
-        "./checkpoints/training_1068070-4-attention-pooling_best_pct_match_0.335_avg_score_0.7520710207664707_num_epoch_24.pth"
-    )
     spectra_length: int = 44997
 
     @classmethod

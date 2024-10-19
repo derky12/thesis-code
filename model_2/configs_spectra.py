@@ -6,8 +6,6 @@ import random
 
 @dataclass
 class TrainingConfig:
-    training_data_path: str = "./data/training_1068070.csv"
-    val_data_path: str = "./data/val_1000.csv"
     device: str = "cuda" if torch.cuda.is_available() else "cpu"  # From device
     train_batch_size: int = 128
     train_val_ratio: float = 0.8
@@ -51,17 +49,13 @@ class TrainingConfig:
     spec_ckpt: str = (
         "./checkpoints/autoencoder-1m-spectra-translation-model-1_num_epoch_56_best_val_error_0.15165482461452484.pth"
     )
-    # trans_ckpt: str = (
-    #     "./checkpoints/no-vae-5m_batch_size_256_num_epoch_1000_val_pct_0.744_best_avg_score_0.91.pth"
-    # )
     trans_ckpt: str = (
         "./checkpoints/no-vae-1m-training-3_batch_size_128_num_epoch_1000_val_avg_score_0.92_best_pct_0.674.pth"
     )
     spectra_vocab_size: int = 1000
     spectra_embed_size: int = 256
     precursor_mass_mask_ratio: float = 1.0  # use all the precursor mass when 1
-    # vocab_path: str = "./data/vocab-5m-filtered.nb"
-    vocab_path: str = "./data/vocab_1213383.nb"
+    vocab_path: str = "./data/vocab-filtered.nb"
     use_tanh: bool = False
     ignore_vae: bool = False
     freeze_embeddings: bool = False

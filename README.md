@@ -8,6 +8,6 @@ The original Spec2Mol code: https://github.com/KavrakiLab/Spec2Mol/tree/master, 
 
 Atom-in-Smiles tokenization method: https://github.com/snu-lcbc/atom-in-SMILES, (Ucak et al., 2023) https://jcheminf.biomedcentral.com/articles/10.1186/s13321-023-00725-9
 
-The training codes part for autoencoders and spectra encoders, tokenisation, vocab generation part, datasets, some utils functions are originally written by the student. Models' codes are largely modified but based on above referred codes.
+The training codes part for autoencoders and spectra encoders, tokenization, vocab generation part, datasets, some utils functions are originally written by the student. Models' codes are largely modified but based on above referred codes.
 
-Unfortunately, due to GitHub's policy regarding large file size limit (100.00 MB), our dataset files that are larger than this limit can't be uploaded to the repo. They would be available upon request.
+Unfortunately, due to GitHub's policy regarding a large file size limit (100.00 MB), our dataset files that are larger than this limit can't be uploaded to the repo. They would be available upon request.

@@ -46,8 +46,8 @@ class TrainingConfig:
     best_pct_match: float = 0.0
     best_avg_score: float = 0.0
     save_pct_frequency: int = 2048
-    training_data_path: str = "./data/df_train_5m.csv"
-    val_data_path: str = "./data/df_val_5m_1k.csv"
+    training_data_path: str = "./data/df_train.csv"
+    val_data_path: str = "./data/df_val_1k.csv"
     device: str = "cuda" if torch.cuda.is_available() else "cpu"  # From device
     trans_batch_size: int = 256
     train_val_ratio: float = 0.8
@@ -66,7 +66,7 @@ class TrainingConfig:
         0.00001  # 0.00001  # 0.00003  # 0.00007  # 细化 0.00003 # 初始 0.0001
     )
     training_id: str = "default"
-    vocab_path: str = "./data/vocab-5m-filtered.nb"
+    vocab_path: str = "./data/vocab-filtered.nb"
     resume_from_checkpoint: str = None
     regression_loss_weight: float = 1.0
 
